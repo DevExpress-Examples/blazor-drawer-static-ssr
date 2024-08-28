@@ -13,12 +13,6 @@ This example implements a responsive drawer in static SSR mode.
 
 The [DxDrawer](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer) component requires interactive render mode to change its [IsOpen](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer.IsOpen) state. In this example we use CSS rules to dynamically change drawer visibility. 
 
-Users can click the checkbox element declared in the [MainLayout.razor](./CS/DxDrawerExample/Components/Layout/MainLayout.razor) page to switch the drawer visibility.
-
-```html
-<input type="checkbox" title="Toggle Nav" ... />
-```
-
 This example contains two nested instances of the DxDrawer component. The first (external) drawer is configured to be used on desktop devices, the second (internal) drawer is configured to be used on mobile devices (less than 769px).
 
 ```html
@@ -39,7 +33,13 @@ This example contains two nested instances of the DxDrawer component. The first 
 </DxDrawer>
 ```
 
-The [MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.razor.css) file contains CSS rules that control visibility of the drawer components.
+Users can click a checkbox element to switch the drawer visibility.
+
+```html
+<input type="checkbox" title="Toggle Nav" class="navbar-toggler icon icon-menu menu-button" checked />
+```
+
+The [MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.razor.css) file contains CSS rules that control visibility of the drawer components base on the viewport size and the checkbox state.
 
 ```css
 /* Show the first drawer (for desctop) based on the toggle button state */
