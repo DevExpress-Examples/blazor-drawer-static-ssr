@@ -1,0 +1,28 @@
+﻿@media (max-width: 768px) {
+    .mobile-drawer-closed .shading-copy {
+        display: none;
+        visibility: hidden;
+    }
+
+    .shading-copy {
+        background-color: var(--dxbl-drawer-content-shading-bg);
+        height: 100%;
+        position: absolute;
+        transition: opacity ease var(--dxbl-drawer-animation-duration);
+        visibility: visible;
+        width: 100%;
+        z-index: 100;
+        opacity: var(--dxbl-drawer-content-shading-opacity);
+    }
+
+    .page:has(.navbar-toggler:checked) .shading-copy {
+        opacity: 0;
+        visibility: unset;
+        height: unset;
+    }
+
+    ::deep .navbar-toggler:checked {
+        
+        background-color: gray;
+    }
+}

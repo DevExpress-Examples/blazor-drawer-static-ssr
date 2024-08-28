@@ -1,0 +1,31 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+<div class="page">
+    <div class="card border-0">
+        <div class="card-header p-2 --bs-primary">
+            <div class="d-flex align-items-baseline justify-content-between">
+                <input type="checkbox" title="Toggle Nav" class="navbar-toggler icon icon-menu menu-button" checked />
+                
+
+            </div>
+        </div>
+    </div>
+
+    <Drawer>
+        <DrawerBody>
+            <div class="w-100">
+                <NavMenu></NavMenu>
+            </div>
+        </DrawerBody>
+        <DrawerTarget>
+            <div class="p-4">
+                @if (!string.IsNullOrEmpty(NavigationManager.ToBaseRelativePath(NavigationManager.Uri))) {
+                    <NavLink href="/">Back to Home</NavLink>
+                }
+                @Body
+            </div>
+        </DrawerTarget>
+    </Drawer>
+
+</div>

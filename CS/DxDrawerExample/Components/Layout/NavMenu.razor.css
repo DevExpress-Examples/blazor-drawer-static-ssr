@@ -1,0 +1,46 @@
+.menu-button {
+    padding: 0.1375rem;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("images/menu.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+::deep .navigation-menu.display-mobile {
+    margin-bottom: 2rem;
+}
+
+::deep .navigation-menu {
+    background-color: inherit;
+    --dxbl-menu-bg: inherit;
+}
+
+    ::deep .navigation-menu .dxbl-menu-item-list {
+        gap: 0.5rem;
+    }
+
+::deep .menu-item {
+    color: var(--bs-white);
+}
+
+::deep .icon {
+    width: 1rem;
+    height: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 0.5rem;
+}
+
+::deep .home-icon {
+    background-image: url("images/home.svg");
+}
+
+::deep .weather-icon {
+    background-image: url("images/weather.svg");
+}
+
+::deep .counter-icon {
+    background-image: url("images/counter.svg");
+}
