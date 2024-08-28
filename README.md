@@ -39,7 +39,7 @@ Users can click a checkbox element to switch the drawer visibility.
 <input type="checkbox" title="Toggle Nav" class="navbar-toggler icon icon-menu menu-button" checked />
 ```
 
-The [MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.razor.css) file contains CSS rules that control visibility of the drawer components base on the viewport size and the checkbox state.
+The [MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.razor.css) file contains CSS rules that control visibility of the drawer components based on the viewport size and the checkbox state.
 
 ```css
 /* Show the first drawer (for desctop) based on the toggle button state */
