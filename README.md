@@ -11,7 +11,10 @@ This example implements a responsive drawer in static SSR mode.
 
 ## Implementation Details
 
-The [DxDrawer](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer) component requires interactive render mode to change its [IsOpen](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer.IsOpen) state. In this example we use CSS rules to dynamically change drawer visibility in static SSR mode. 
+The [DxDrawer](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer) component requires interactive render mode to change its [IsOpen](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer.IsOpen) state. However you can use the following approaches to dynamically change drawer visibility in static SSR mode.
+
+* Use query params to control drawer visibility. This approach is implemented in our [project templates](https://docs.devexpress.com/Blazor/401057/get-started?v=24.2#devexpress-project-templates) in v24.1.6 and later.
+* Use CSS rules to control drawer visibility. This approach is demonstrated in the current example.
 
 This example contains two nested instances of the DxDrawer component. The first (external) drawer is configured to be used on desktop devices, the second (internal) drawer is configured to be used on mobile devices (less than 769px).
 
