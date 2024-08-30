@@ -45,10 +45,11 @@ Users can click a checkbox element to switch the drawer visibility.
 The [MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.razor.css) file contains CSS rules that control visibility of the drawer components based on the viewport size and the checkbox state.
 
 ```css
-/* Show the first drawer (for desktop) based on the toggle button state */
+/* Display the first drawer (for desktop) */
 ::deep .navigation-drawer > .dxbl-drawer-panel {
     display: flex;
 }
+/* Collapse or expand the first drawer based on the toggle button state */
 ::deep.page:has(.navbar-toggler:not(:checked)) .navigation-drawer:not(.mobile) > .dxbl-drawer-panel {
     width: 0 !important;
 }
@@ -64,10 +65,11 @@ The [MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.raz
         display: none;
     }
 
-    /* Show the second drawer (for mobile) based on the toggle button state */
+    /* Display the second drawer (for mobile) */
     ::deep .navigation-drawer.mobile > .dxbl-drawer-panel {
         display: flex;
     }
+    /* Collapse or expand the second drawer based on the toggle button state */
     ::deep.page:has(.navbar-toggler:checked) .navigation-drawer.mobile > .dxbl-drawer-panel {
         width: 0 !important;
     }
