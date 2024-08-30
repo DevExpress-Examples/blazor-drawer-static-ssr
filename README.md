@@ -53,7 +53,6 @@ The [MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.raz
 ::deep.page:has(.navbar-toggler:not(:checked)) .navigation-drawer:not(.mobile) > .dxbl-drawer-panel {
     width: 0 !important;
 }
-
 /* Hide the second drawer (for mobile) */
 ::deep .navigation-drawer.mobile > .dxbl-drawer-panel {
     display: none;
@@ -64,7 +63,6 @@ The [MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.raz
     ::deep .navigation-drawer > .dxbl-drawer-panel {
         display: none;
     }
-
     /* Display the second drawer (for mobile) */
     ::deep .navigation-drawer.mobile > .dxbl-drawer-panel {
         display: flex;
