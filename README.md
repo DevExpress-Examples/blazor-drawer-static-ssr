@@ -7,10 +7,10 @@
 
 This example implements a responsive drawer in static SSR mode.
 
-The [DxDrawer](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer) component requires interactive render mode to change its [IsOpen](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer.IsOpen) state. However you can use the following approaches to dynamically change drawer visibility in static SSR mode.
+The [DxDrawer](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer) component requires interactive render mode to change its [IsOpen](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer.IsOpen) state. Use the following approaches to dynamically change drawer visibility in static SSR mode.
 
-* Use query params to control drawer visibility. This approach is implemented in our [project templates](https://docs.devexpress.com/Blazor/401057/get-started?v=24.2#devexpress-project-templates) in v24.1.6 and later.
-* Use CSS rules to control drawer visibility. This approach is demonstrated in the current example.
+* Add query params that control drawer visibility. This approach is implemented in our [project templates](https://docs.devexpress.com/Blazor/401057/get-started?v=24.2#devexpress-project-templates) in v24.1.6 and later.
+* Specify CSS rules to control drawer visibility. This approach is demonstrated in the current example.
   
 ![Responsive Drawer](drawer.gif)
 
@@ -36,13 +36,13 @@ This example contains two nested instances of the DxDrawer component. The first 
 </DxDrawer>
 ```
 
-Users can click a checkbox element to switch the drawer visibility.
+Users can click a checkbox element to open or close the drawer.
 
 ```html
 <input type="checkbox" title="Toggle Nav" class="navbar-toggler icon icon-menu menu-button" checked />
 ```
 
-The [MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.razor.css) file contains CSS rules that control visibility of the drawer components based on the viewport size and the checkbox state.
+The CSS file ([MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.razor.css)) specifies rules that open or close the drawer based on the viewport size and the checkbox state.
 
 ```css
 /* Display the first drawer (for desktop) */
