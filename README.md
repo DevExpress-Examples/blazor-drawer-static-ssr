@@ -7,16 +7,16 @@
 
 This example implements a responsive drawer in static SSR mode.
 
-The [DxDrawer](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer) component requires interactive render mode to change its [IsOpen](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer.IsOpen) state. Use the following approaches to dynamically change drawer visibility in static SSR mode.
+The [DxDrawer](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer) component requires interactive render mode to change its [IsOpen](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer.IsOpen) state. Use one of the following strategies to dynamically change drawer visibility in static SSR mode.
 
-* Add query params that control drawer visibility. This approach is implemented in our [project templates](https://docs.devexpress.com/Blazor/401057/get-started?v=24.2#devexpress-project-templates) in v24.1.6 and later.
-* Specify CSS rules to control drawer visibility. This approach is demonstrated in the current example.
+* Add query params to control drawer visibility. This approach is used within DevExpress Blazor [project templates](https://docs.devexpress.com/Blazor/401057/get-started?v=24.2#devexpress-project-templates)(v24.1.6+). 
+* Specify CSS rules to control drawer visibility (this example).
   
 ![Responsive Drawer](drawer.gif)
 
 ## Implementation Details
 
-This example contains two nested instances of the DxDrawer component. The first (external) drawer is configured to be used on desktop devices, the second (internal) drawer is configured to be used on mobile devices (less than 769px).
+This example contains two nested instances of the DxDrawer component. The first (external) drawer is configured for use on desktop devices - the second (internal) drawer is configured for use on mobile devices (less than 769px).
 
 ```html
 <DxDrawer PanelWidth="240px" CssClass="navigation-drawer" Mode="@DrawerMode.Shrink" IsOpen="@true" >
@@ -36,13 +36,13 @@ This example contains two nested instances of the DxDrawer component. The first 
 </DxDrawer>
 ```
 
-Users can click a checkbox element to open or close the drawer.
+Users can click a checkbox element to open or close the drawer. 
 
 ```html
 <input type="checkbox" title="Toggle Nav" class="navbar-toggler icon icon-menu menu-button" checked />
 ```
 
-The CSS file ([MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.razor.css)) specifies rules that open or close the drawer based on the viewport size and the checkbox state.
+The CSS file ([MainLayout.razor.css](./CS/DxDrawerExample/Components/Layout/MainLayout.razor.css)) specifies rules that open or close the drawer based on viewport size and the checkbox state.
 
 ```css
 /* Display the first drawer (for desktop) */
