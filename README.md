@@ -17,7 +17,7 @@ The [DevExpress Blazor Drawer](https://docs.devexpress.com/Blazor/DevExpress.Bla
 
 ## Implementation Details
 
-This example contains two nested instances of the DevExpress Blazor Drawe (DxDrawer) component. The first (external) drawer is configured for use on desktop devices - the second (internal) drawer is configured for use on mobile devices (less than 769px).
+This example contains two nested instances of the DevExpress Blazor Drawer (DxDrawer) component. The first (external) drawer is configured for use on desktop devices - the second (internal) drawer is configured for use on mobile devices (less than 769px).
 
 ```html
 <DxDrawer PanelWidth="240px" CssClass="navigation-drawer" Mode="@DrawerMode.Shrink" IsOpen="@true" >
