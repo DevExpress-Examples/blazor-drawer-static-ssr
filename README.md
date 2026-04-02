@@ -10,7 +10,7 @@ This example implements a responsive drawer when using static SSR mode.
 
 The [DevExpress Blazor Drawer](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer) component requires interactive render mode to change its [IsOpen](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxDrawer.IsOpen) state. Use one of the following strategies to dynamically change drawer visibility in static SSR mode.
 
-* Add query params to control drawer visibility. This approach is used within DevExpress Blazor [project templates](https://docs.devexpress.com/Blazor/401057/get-started?v=24.2#devexpress-project-templates) (v24.1.6+). 
+* Add query params to control drawer visibility. This approach is used in ASP.NET Core Blazor Application template within [DevExpress Template Kit](https://docs.devexpress.com/Blazor/405308/get-started/template-kit).
 * Specify CSS rules to control drawer visibility (this example).
   
 ![Responsive Drawer](drawer.gif)

@@ -13,21 +13,15 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="DxDrawerExample.styles.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
-
-    <link href=@AppendVersion("_content/DevExpress.Blazor.Themes/blazing-berry.bs5.min.css") rel="stylesheet" />
-
-   @DxResourceManager.RegisterScripts()
-
+    @DxResourceManager.RegisterTheme(Themes.Fluent.Clone(properties => {
+        properties.UseBootstrapStyles = true;
+        }))
+    @DxResourceManager.RegisterScripts()
 </head>
 
 <body>
-    <Routes />
+    <Routes @rendermode="InteractiveServer" />
     <script src="_framework/blazor.web.js"></script>
 </body>
 
 </html>
-
-@code {
-    private string AppendVersion(string path) => FileVersionProvider.AddFileVersionToPath("/", path);
-}
-
