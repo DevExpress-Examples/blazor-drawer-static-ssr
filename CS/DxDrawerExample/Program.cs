@@ -11,7 +11,6 @@ builder.Services.AddRazorComponents()
 builder.Services.AddMvc();
 
 builder.Services.AddDevExpressBlazor(options => {
-    options.BootstrapVersion = DevExpress.Blazor.BootstrapVersion.v5;
     options.SizeMode = DevExpress.Blazor.SizeMode.Medium;
 });
 
